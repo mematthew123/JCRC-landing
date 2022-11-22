@@ -26,7 +26,7 @@ function Layout({ children }) {
           <p>
             <a
               className="font-bold text-white no-underline"
-              href=" gi "
+              href="  "
               target="_blank"
               rel="noopener noreferrer"
             >
