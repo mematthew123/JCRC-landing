@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Group94 from "../images/Group94.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import FrameImg from "../images/FrameImg.svg";
+// we need to import from google fonts
 
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
@@ -16,12 +17,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-const navigation = [
-  { name: "Pricing", href: "#" },
-  { name: "Partners", href: "#" },
-  { name: "Company", href: "#" },
-];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -31,14 +26,12 @@ export default function Header() {
     <div className="bg-white">
       <header>
         <Popover className="relative bg-white">
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+          <div className="mx-auto flex max-w-9xl items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+          {/* <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8"> */}
+
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <img
-                  className="h-8 w-auto sm:h-10"
-                  src={FrameImg}
-                  alt="Whoo-hoo"
-                />
+                <img className="h-8 sm:h-10" src={FrameImg} alt="Whoo-hoo" />
               </a>
             </div>
             <div className="-my-2 -mr-2 md:hidden">
@@ -79,7 +72,7 @@ export default function Header() {
 
               <ul
                 style={{ color: `${linkColor}` }}
-                className=" md:flex flex float-right"
+                className=" md:flex flex justify-items-stretch float-right"
               >
                 <li className=" float-right text-sm uppercase hover:border-b">
                   <Link href="/">WHO WE ARE </Link>
@@ -128,7 +121,7 @@ export default function Header() {
                       <img
                         className="h-8 w-auto"
                         src={FrameImg}
-                        alt="Your Company"
+                        alt="logo ya bish"
                       />
                     </div>
                     <div className="-mr-2">
@@ -182,36 +175,43 @@ export default function Header() {
           {/* Hero card */}
           <div className="relative">
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
-            <div className="mx-auto max-w-9xl sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-8xl sm:px-6 lg:px-0">
               <div className="relative shadow-xl sm:overflow-hidden ">
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 shadow-lime-600">
                   <img
-                    className="h-full w-screen object-cover"
+                    className="h-3/4  w-screen object-cover shadow-xl shadow-lime-600 box-shadow-lime-600 "
                     src={Group94}
                     alt="People working on laptops"
                   />
-                  <div className="absolute inset-0 mix-blend-multiply" />
                 </div>
-                <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+
+                <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-48  lg:px-2">
                   <h1 className="text-center text-6xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className=" text-9xl block ml-56 text-white">WE ARE</span>
-                    <span className=" text-9xl ml-52 block align-text-top text-white">
+                    <span className=" lg:font-sans-serif-pro lg:py-0 tracking-wide lg:align-text-top text-2xl md:text-5xl lg:text-9xl sm:text-base lg:ml-96 text-white">
+                      WE ARE
+                    </span>
+                    <span className="  tracking-wide lg:align-text-top text-2xl md:text-5xl lg:text-9xl lg:ml-64 sm:text-xs block align-text-top text-white">
                       JCRC{" "}
                     </span>
                   </h1>
-                  <h3 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-right text-indigo-200">
-                      customer support
-                    </span>
-                  </h3>
-
-                  <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
-                    <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
+                
+                  <ul className=" mr-6 max-w-lg mx-auto ml-auto sm:text-xs text-2xl text-white sm:max-w-3xl">
+                  <div className="flex flex-col justify-center items-center">
+                      <li className="text-white sm:text-xs lg:text-2xl">We are a</li>
+                      <li className="text-white sm:text-xs lg:text-2xl">We are a</li>
+                      <li className="text-white sm-text-xs lg:text-2xl">We are a</li>
+                      </div>
+                        
+                    </ul>
+                    
         
-                    </div>
-                  </div>
+                 
                 </div>
+                
+                
               </div>
+       
+              <div className="absolute inset-0 h-3 lg:mt-96 lg:top-[355px] w-screen lg:bg-lime-600  " />
             </div>
           </div>
 
