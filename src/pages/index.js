@@ -7,6 +7,7 @@ import Header from "../components/header";
 function IndexPage() {
   return (
     <Layout>
+      
       <div className=" text-right object-cover "></div>
     </Layout>
   );
